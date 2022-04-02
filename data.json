@@ -1,0 +1,37 @@
+{
+    "data":[
+        {
+            "input": "hello",
+            "output": "Hey, how are you doing?"
+        },
+        {
+            "input": "I am doing good",
+            "output": "Thats good to hear"
+        },
+        {
+            "input": "I am doing alright",
+            "output": "Thats good"
+        },
+        {
+            "input": "I am doing ok",
+            "output": "Thats good"
+        },
+        {
+            "input": "hi",
+            "output": "Hey, how are you doing?"
+        },
+        {
+            "input": "goodbye",
+            "output": "see ya later!"
+        },
+        {
+            "input": "what are you",
+            "output": "I am an artificial intelligence system using neural networks."
+        },
+        {
+            "input": "whats new",
+            "output": "nothing much, just been chilling"
+        }
+
+    ]
+}

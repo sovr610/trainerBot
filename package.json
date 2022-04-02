@@ -1,0 +1,29 @@
+{
+  "name": "@jarvis-home-automation/trainerbot",
+  "version": "1.0.0",
+  "description": "To train neural network models and save them for brain.js",
+  "main": "train.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-start": "node train.js",
+    "build": "gulp compile"
+  },
+  "keywords": [
+    "train",
+    "bot",
+    "brain",
+    "brain.js"
+  ],
+  "author": "Parker Bidigare",
+  "license": "ISC",
+  "dependencies": {
+    "arg": "^5.0.1",
+    "brain.js": "^2.0.0-beta.11",
+    "eslint": "^8.12.0",
+    "google-closure-compiler": "^20220301.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0"
+  }
+}

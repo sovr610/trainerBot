@@ -18,7 +18,7 @@ The ability to train a LSTM neural network that runs brain.js and saves the mode
         b. `--modelfile`: The output model file name (the output directory is where you run the train.js file).
         c. `--datafile`: The input data file name (the directoory is the same as where tou run the train.js).
         
-4. A good example to train a model with trainerBot is: `node train.js --iterations 5000 --datafile data_one --modelfile model_one
+4. A good example to train a model with trainerBot is: `node train.js --iterations 5000 --datafile data_one --modelfile model_one`
     - This will get the data file `./data_one.json` and train the model `5000` times and output the model to `./model_one.json`.
 
 5. congrats! you have a brain.js model saved in a file for later use.

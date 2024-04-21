@@ -1,47 +1,88 @@
 const brain = require('brain.js');
 const arg = require('arg');
-const fs = require('fs');
+const fsObj = require('fs');
+const cliProgress = require('cli-progress');
+const data = require('./data.json');
 
+/**
+ * Parses the arguments given to the program and returns an object with the values
+ * @param {String[]} rawArgs - The arguments to give to the program
+ * @function parseArgumentsForDataConfig
+ * @returns object of arguments processes to access each value with ease and preset values if not given
+ */
 function parseArgumentsForDataConfig(rawArgs) {
-    const args = arg({
-        '--iterations': Number,
-        '--datafile': String,
-        '--modelfile': String,
-        '--help': Boolean,
-        '-i': '--iterations',
-        '-d': '--datafile',
-        '-m': '--modelfile',
-        '-h': '--help'
-    }, {
-        argv: rawArgs.slice(2),
-    });
-    return {
-        iterations: args['--iterations'] || 4000,
-        datafile: args['--datafile'] || 'data.json',
-        modelfile: args['--modelfile'] || 'model.json',
-        help: args['--help'] || false
-
-    };
+  const args = arg(
+    {
+      '--iterations': Number,
+      '--datafile': String,
+      '--modelfile': String,
+      '--help': Boolean,
+      '-i': '--iterations',
+      '-d': '--datafile',
+      '-m': '--modelfile',
+      '-h': '--help',
+    },
+    {
+      argv: rawArgs.slice(2),
+    },
+  );
+  return {
+    iterations: args['--iterations'] || 4000,
+    modelfile: args['--modelfile'] || 'model',
+    help: args['--help'] || false,
+  };
 }
 
-const agrc = parseArgumentsForDataConfig(process.argv);
 
+
+const argc = parseArgumentsForDataConfig(process.argv);
 console.log(argc);
 
-if (agrc.help === true) {
-    console.log('--iterations / -i -> the number of iterations to train the neural network.');
-    console.log('--datafile / -d -> set the source of the data as a json file (don\'t add file extension)');
-    console.log('--modelfile / -m -> set the output of the model file name (don\'t add file extension)');
+const progressBar = new cliProgress.SingleBar({
+    format: 'Progress [{bar}] {percentage}% | {value}/{total} Iterations | ETA: {eta_formatted} | Training Neural Networ Model',
+    barCompleteChar: '\u2588',
+    barIncompleteChar: '\u2591',
+    hideCursor: true
+}, cliProgress.Presets.shades_classic);
+progressBar.start(argc.iterations, 0);
+if (data == null) {
+  console.log(
+    'Please supply a data file to train the neural network named: data.json.',
+  );
+} else if (argc.help === true) {
+  console.log(
+    '--iterations / -i -> the number of iterations to train the neural network.',
+  );
+  console.log(
+    "--modelfile / -m -> set the output of the model file name (don't add file extension)",
+  );
 } else {
-    var data = fs.readFileSync(__dirname + '\\' + agrc.datafile + '.json');
-    console.log(__dirname + '\\' + agrc.datafile);
-    const net = new brain.recurrent.LSTM();
-    data = JSON.parse(data);
-    net.train(data.data, {
-        iterations: agrc.iterations,
-        log: details => console.log(details)
-    });
+  const net = new brain.recurrent.LSTM({
+    hiddenLayers: [20, 20],
+    learningRate: 0.01,
+    decayRate: 0.999,
+    errorThresh: 0.005,
+  });
+  
+  net.train(data.data, {
+    iterations: argc.iterations,
+    log: true,
+    logPeriod: 100,
+    layers: [10, 20, 10],
+    errorThresh: 0.001,
+    callbackPeriod: 1,
+    callback: (state) => {
+        console.clear(); 
+        const progress = state.iterations; // Convert iteration count to progress percentage
+        progressBar.update(progress);
+      },
+  });
 
-    var model = net.toJSON();
-    fs.writeFileSync(__dirname + '\\' + agrc.modelfile + '.json', JSON.stringify(model));
+  const model = net.toJSON();
+  fsObj.writeFileSync(
+    `${__dirname}\\${argc.modelfile}.json`,
+    JSON.stringify(model),
+  );
+
+  progressBar.stop();
 }

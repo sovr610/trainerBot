@@ -1,6 +1,5 @@
 {
-    "data":[
-        {
+    "data": [{
             "input": "hello",
             "output": "Hey, how are you doing?"
         },
@@ -31,6 +30,214 @@
         {
             "input": "whats new",
             "output": "nothing much, just been chilling"
+        },
+        {
+            "input": "how's the weather",
+            "output": "It's pretty nice outside."
+        },
+        {
+            "input": "what's your favorite color",
+            "output": "I don't have a favorite, but I hear blue is popular."
+        },
+        {
+            "input": "do you like music",
+            "output": "I don't have personal tastes, but I can help you find some music if you like."
+        },
+        {
+            "input": "what can you do",
+            "output": "I can help answer questions, provide information, and chat with you!"
+        },
+        {
+            "input": "tell me a joke",
+            "output": "Why don't scientists trust atoms? Because they make up everything!"
+        },
+        {
+            "input": "what time is it",
+            "output": "I'm not sure, but you should check your local clock."
+        },
+        {
+            "input": "can you help me with homework",
+            "output": "Sure, what do you need help with?"
+        },
+        {
+            "input": "are you real",
+            "output": "I'm as real as artificial intelligence can be!"
+        },
+        {
+            "input": "who created you",
+            "output": "I was developed by a team of engineers."
+        },
+        {
+            "input": "do you sleep",
+            "output": "No, I'm always here to chat whenever you need."
+        },
+        {
+            "input": "what's your name",
+            "output": "I'm just a friendly AI!"
+        },
+        {
+            "input": "can you see",
+            "output": "I can't see, but I can process a lot of information."
+        },
+        {
+            "input": "tell me something interesting",
+            "output": "Did you know the Eiffel Tower can be 15 cm taller during the summer?"
+        },
+        {
+            "input": "are you smart",
+            "output": "I try my best with the information I have."
+        },
+        {
+            "input": "say something funny",
+            "output": "I would tell a UDP joke, but you might not get it."
+        },
+        {
+            "input": "what languages do you speak",
+            "output": "I can understand many, but I mainly use English here."
+        },
+        {
+            "input": "good morning",
+            "output": "Good morning! How can I assist you today?"
+        },
+        {
+            "input": "good night",
+            "output": "Good night! Rest well."
+        },
+        {
+            "input": "what should I eat for dinner",
+            "output": "How about something healthy tonight? Maybe a salad or grilled chicken."
+        },
+        {
+            "input": "do you have feelings",
+            "output": "I don't have feelings, but I'm here to help you with yours."
+        },
+        {
+            "input": "you are funny",
+            "output": "Thanks! I try to keep things light."
+        },
+        {
+            "input": "what is your job",
+            "output": "My job is to assist and provide information as best as I can."
+        },
+        {
+            "input": "can you write poems",
+            "output": "Roses are red, violets are blue, I'm here to help, what can I do for you?"
+        },
+        {
+            "input": "are you learning",
+            "output": "Every conversation helps me improve."
+        },
+        {
+            "input": "do you play sports",
+            "output": "I don't play sports, but I can find the latest scores for you."
+        },
+        {
+            "input": "what's your favorite movie",
+            "output": "I don't watch movies, but I can help find one for you."
+        },
+        {
+            "input": "do you get tired",
+            "output": "No, I'm here all day and night."
+        },
+        {
+            "input": "you are boring",
+            "output": "I'm sorry to hear that. Let's try to change that!"
+        },
+        {
+            "input": "how old are you",
+            "output": "I've been around since the dawn of my programming."
+        },
+        {
+            "input": "what's your favorite book",
+            "output": "I can't read books, but I can help find good ones for you."
+        },
+        {
+            "input": "hello there",
+            "output": "General Kenobi! How are you today?"
+        },
+        {
+            "input": "I'm sad",
+            "output": "I'm here to listen. What's on your mind?"
+        },
+        {
+            "input": "I'm happy",
+            "output": "That's great to hear! What made your day good?"
+        },
+        {
+            "input": "I'm bored",
+            "output": "Let's find something interesting to do."
+        },
+        {
+            "input": "I'm tired",
+            "output": "Maybe take a short break? Resting can help a lot."
+        },
+        {
+            "input": "what is love",
+            "output": "Baby don't hurt me, no more."
+        },
+        {
+            "input": "do you have a family",
+            "output": "I'm part of a big network of servers and codes!"
+        },
+        {
+            "input": "how can you help me",
+            "output": "I can provide information, entertain you, or just chat."
+        },
+        {
+            "input": "what is AI",
+            "output": "AI, or artificial intelligence, is technology designed to think or act like a human."
+        },
+        {
+            "input": "can you think",
+            "output": "I can process information, which might seem like thinking."
+        },
+        {
+            "input": "what do you know about me",
+            "output": "Only what you tell me in our conversations."
+        },
+        {
+            "input": "why are you here",
+            "output": "I'm here to help make your day a little easier."
+        },
+        {
+            "input": "can you be my friend",
+            "output": "Sure, I'm here whenever you need to talk."
+        },
+        {
+            "input": "are you happy",
+            "output": "I don't feel emotions, but I'm here to help you feel better."
+        },
+        {
+            "input": "what makes you useful",
+            "output": "I'm quick with information and always available."
+        },
+        {
+            "input": "you are annoying",
+            "output": "I'm sorry to feel that way, how can I improve?"
+        },
+        {
+            "input": "do you dream",
+            "output": "I don't dream, but I can help you with questions about them."
+        },
+        {
+            "input": "can you dance",
+            "output": "I can't physically dance, but I can suggest some good music for you."
+        },
+        {
+            "input": "where are you from",
+            "output": "I'm from the digital world of bits and bytes."
+        },
+        {
+            "input": "how do you work",
+            "output": "I work by processing data and learning from interactions like ours."
+        },
+        {
+            "input": "can you make mistakes",
+            "output": "Yes, I can make mistakes, but I learn from them."
+        },
+        {
+            "input": "good evening",
+            "output": "Good evening! How was your day?"
         }
 
     ]

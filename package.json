@@ -23,11 +23,17 @@
   "author": "Parker Bidigare",
   "license": "ISC",
   "dependencies": {
+    "@tensorflow/tfjs": "^4.18.0",
+    "@tensorflow/tfjs-node": "^4.18.0",
+    "@tensorflow/tfjs-node-gpu": "^4.18.0",
     "arg": "^5.0.1",
     "brain.js": "^2.0.0-beta.11",
     "cli-progress": "^3.12.0",
     "fs": "^0.0.1-security",
+    "glob": "^10.3.12",
     "google-closure-compiler": "^20240317.0.0",
+    "midi-converter": "^0.1.5",
+    "sharp": "^0.33.3",
     "webgl": "^0.0.7"
   },
   "devDependencies": {

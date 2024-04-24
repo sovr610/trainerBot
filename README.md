@@ -29,5 +29,6 @@ The ability to train a LSTM neural network that runs brain.js and saves the mode
 ~~ optimize Javascript code with google cloosure compiler (started but not finished).~~
 - [x] optimize the javascript project with webpack.
 - [x] integrate nexe to deploy an executable to run the trainerbot. 
+- [x] Add progress bar to notify progress to user of training the model.
 - [ ] Have the optioon to use clusters to have parallel multiple neural network models being made at once.
 - [ ] Have a verification process to test the model.
